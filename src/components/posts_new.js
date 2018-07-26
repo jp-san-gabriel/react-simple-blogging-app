@@ -16,12 +16,29 @@ class PostsNew extends Component {
       );
   }
 
+  renderCategoriesField(field) {
+      return (
+        <div className="form-group">
+          <label>Categories</label>
+          <input
+            className="form-control"
+            type="text"
+            {...field.input}
+          />
+        </div>
+      );
+  }
+
   render() {
     return (
       <form>
         <Field
           name="title"
           component={this.renderTitleField}
+        />
+        <Field
+          name="categories"
+          component={this.renderCategoriesField}
         />
       </form>
     );
