@@ -29,6 +29,11 @@ class PostsNew extends Component {
           name="categories"
           component={this.renderField}
         />
+        <Field
+          label="Post Content"
+          name="content"
+          component={this.renderField}
+        />
       </form>
     );
   }
