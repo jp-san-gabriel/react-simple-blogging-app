@@ -10,10 +10,13 @@ class PostsShow extends Component {
   }
 
   render () {
-    posts[this.props.match.params.id];
+    const { post } = this.props;
+
     return (
       <div>
-        Post Show!
+        <h3> { post.title } </h3>
+        <h6> Categories: { post.categories } </h6>
+        <p>{ post.content }</p>
       </div>
     );
   }
